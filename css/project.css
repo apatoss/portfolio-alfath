@@ -334,11 +334,37 @@
   border: 1px solid var(--color-border);
   transition: box-shadow var(--transition), transform var(--transition);
   cursor: zoom-in;
+  -webkit-user-select: none;
+  user-select: none;
+  -webkit-user-drag: none;
+  pointer-events: none;
+}
+
+/* Wrapper needs pointer-events so hover/click still work */
+.gallery-item {
+  position: relative;
+}
+
+/* Invisible overlay to block direct image interaction */
+.gallery-item::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  cursor: zoom-in;
 }
 
 .project-gallery img:hover {
   box-shadow: var(--shadow-lg);
   transform: scale(1.02);
+}
+
+/* Lightbox image protection */
+.lightbox__img {
+  -webkit-user-select: none;
+  user-select: none;
+  -webkit-user-drag: none;
+  pointer-events: none;
 }
 
 /* ============================================================

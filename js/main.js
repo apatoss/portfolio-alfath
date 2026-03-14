@@ -83,6 +83,36 @@ activeStyle.textContent = `.nav__links a.active { color: var(--color-accent) !im
 document.head.appendChild(activeStyle);
 
 // ============================================================
+//  IMAGE PROTECTION — prevent right-click, drag, and save
+// ============================================================
+// Disable right-click on the entire page
+document.addEventListener('contextmenu', (e) => {
+  if (e.target.tagName === 'IMG' || e.target.closest('.about__image-placeholder, .gallery__item, .gallery__grid')) {
+    e.preventDefault();
+  }
+});
+
+// Disable drag on all images
+document.addEventListener('dragstart', (e) => {
+  if (e.target.tagName === 'IMG') {
+    e.preventDefault();
+  }
+});
+
+// Block common save/print shortcuts
+document.addEventListener('keydown', (e) => {
+  // Ctrl+S (save), Ctrl+Shift+S (save as), Ctrl+P (print), PrintScreen
+  if (
+    (e.ctrlKey && e.key === 's') ||
+    (e.ctrlKey && e.shiftKey && e.key === 'S') ||
+    (e.ctrlKey && e.key === 'p') ||
+    e.key === 'PrintScreen'
+  ) {
+    e.preventDefault();
+  }
+});
+
+// ============================================================
 //  CONTACT FORM — Netlify success message
 // ============================================================
 const form = document.querySelector('.contact__form');
