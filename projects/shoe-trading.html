@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Shoe Trading Platform | Al Fath</title>
+  <link rel="stylesheet" href="../css/style.css" />
+  <link rel="stylesheet" href="../css/project.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+  <nav class="nav" id="nav">
+    <a href="../index.html" class="nav__logo">AF<span class="accent">.</span></a>
+    <a href="../index.html#projects" class="nav__back">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><polyline points="15 18 9 12 15 6"/></svg>
+      Back to Projects
+    </a>
+  </nav>
+
+  <main class="project-page">
+
+    <div class="project-hero">
+      <div class="container">
+        <span class="project-hero__badge">Personal Project &mdash; In Progress</span>
+        <h1 class="project-hero__title">Peer-to-Peer Shoe Trading and Retail Platform</h1>
+        <p class="project-hero__subtitle">
+          A full-featured marketplace platform for buying, selling, and trading sneakers. Supports peer-to-peer user listings alongside direct retail, with product verification, offer negotiation, and secure transaction flows.
+        </p>
+        <div class="project-hero__tags">
+          <span>TypeScript</span>
+          <span>Angular</span>
+          <span>.NET C#</span>
+          <span>ASP.NET Web API</span>
+          <span>SQL Server</span>
+          <span>REST API</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="container project-body">
+
+      <div class="project-section">
+        <h2>Overview</h2>
+        <p>
+          This platform is built to serve sneaker enthusiasts who want to buy, sell, or trade shoes in a trusted environment. It combines a peer-to-peer marketplace — where users can list their own items — with a retail section offering direct purchases.
+        </p>
+        <p>
+          The platform includes a product verification layer to ensure listing authenticity, an offer and negotiation system for trades, and a transaction management flow to keep both buyers and sellers protected throughout the process.
+        </p>
+        <p class="project-note">
+          This project is currently in active development. Features and screenshots will be updated as progress continues.
+        </p>
+      </div>
+
+      <div class="project-section">
+        <h2>Planned Features</h2>
+        <ul class="project-features">
+          <li>User listings — sell or trade sneakers with photos, condition, and pricing</li>
+          <li>Direct retail section for brand new stock purchases</li>
+          <li>Product verification system for authenticity checks</li>
+          <li>Offer and counter-offer negotiation between buyers and sellers</li>
+          <li>Secure transaction and order management flow</li>
+          <li>User profiles with trade history and seller ratings</li>
+          <li>Search and filter by brand, size, condition, and price range</li>
+          <li>Admin dashboard for platform moderation and listing management</li>
+        </ul>
+      </div>
+
+      <div class="project-section">
+        <h2>Tech Stack</h2>
+        <div class="project-techstack">
+          <div class="tech-item"><span>Angular</span><p>Frontend framework</p></div>
+          <div class="tech-item"><span>TypeScript</span><p>Frontend language</p></div>
+          <div class="tech-item"><span>.NET C# / ASP.NET</span><p>Backend services &amp; REST API</p></div>
+          <div class="tech-item"><span>Microsoft SQL Server</span><p>Database</p></div>
+          <div class="tech-item"><span>REST API</span><p>Frontend-backend integration</p></div>
+        </div>
+      </div>
+
+      <div class="project-section">
+        <h2>Screenshots</h2>
+        <p class="project-section__note">Screenshots will be added as the project progresses. Place image files in <code>projects/assets/</code>.</p>
+        <div class="project-gallery">
+          <div class="gallery-item gallery-item--desktop">
+            <img src="assets/shoe-1.png" alt="Marketplace listing" />
+          </div>
+          <div class="gallery-item gallery-item--desktop">
+            <img src="assets/shoe-2.png" alt="Product detail" />
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </main>
+
+  <!-- LIGHTBOX -->
+  <div class="lightbox" id="lightbox">
+    <button class="lightbox__close" id="lightboxClose">&times;</button>
+    <img class="lightbox__img" id="lightboxImg" src="" alt="" />
+  </div>
+
+  <footer class="footer">
+    <p>Designed &amp; Built by <strong>Muhammad Al Fath</strong></p>
+  </footer>
+
+  <script src="../js/main.js"></script>
+  <script>
+    const lightbox = document.getElementById('lightbox');
+    const lightboxImg = document.getElementById('lightboxImg');
+    const lightboxClose = document.getElementById('lightboxClose');
+
+    document.querySelectorAll('.gallery-item img').forEach(img => {
+      img.addEventListener('click', () => {
+        lightboxImg.src = img.src;
+        lightboxImg.alt = img.alt;
+        lightbox.classList.add('open');
+        document.body.style.overflow = 'hidden';
+      });
+    });
+
+    function closeLightbox() {
+      lightbox.classList.remove('open');
+      document.body.style.overflow = '';
+    }
+
+    lightboxClose.addEventListener('click', closeLightbox);
+    lightbox.addEventListener('click', e => { if (e.target === lightbox) closeLightbox(); });
+    document.addEventListener('keydown', e => { if (e.key === 'Escape') closeLightbox(); });
+  </script>
+</body>
+</html>

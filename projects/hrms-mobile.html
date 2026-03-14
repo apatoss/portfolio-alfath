@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>HRMS Mobile Application | Al Fath</title>
+  <link rel="stylesheet" href="../css/style.css" />
+  <link rel="stylesheet" href="../css/project.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+  <nav class="nav" id="nav">
+    <a href="../index.html" class="nav__logo">AF<span class="accent">.</span></a>
+    <a href="../index.html#projects" class="nav__back">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><polyline points="15 18 9 12 15 6"/></svg>
+      Back to Projects
+    </a>
+  </nav>
+
+  <main class="project-page">
+
+    <div class="project-hero">
+      <div class="container">
+        <span class="project-hero__badge">Professional &mdash; BlueAura Technology</span>
+        <h1 class="project-hero__title">HRMS Mobile Application (Conficore)</h1>
+        <p class="project-hero__subtitle">
+          A cross-platform Human Resource Management System mobile application for iOS and Android, developed for Conficore. Enables employees to manage attendance, view HR events, and track real-time status from their mobile devices.
+        </p>
+        <div class="project-hero__tags">
+          <span>Flutter</span>
+          <span>Dart</span>
+          <span>Swift (iOS)</span>
+          <span>.NET C#</span>
+          <span>Docker</span>
+          <span>MSSQL</span>
+          <span>REST API</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="container project-body">
+
+      <div class="project-section">
+        <h2>Overview</h2>
+        <p>
+          This project was developed at BlueAura Technology as part of a commercial HRMS solution for Conficore. The mobile application was built to complement the existing web-based HRMS by extending its capabilities to iOS and Android devices, giving employees and HR managers convenient mobile access to key HR functions.
+        </p>
+        <p>
+          The backend was built with .NET C# and containerized using Docker, with Microsoft SQL Server (MSSQL) as the database. iOS development was performed on a Mac machine to support Swift and cross-platform deployment.
+        </p>
+        <p class="project-note">
+          This is a commercial project developed under BlueAura Technology. Source code is confidential. Only work descriptions and outcomes are shared here.
+        </p>
+      </div>
+
+      <div class="project-section">
+        <h2>Key Features</h2>
+        <ul class="project-features">
+          <li>Clock In / Clock Out with real-time attendance tracking</li>
+          <li>Interactive dashboard with dynamic, configurable widgets</li>
+          <li>Real-time attendance status display and updates</li>
+          <li>Calendar view showing leave approvals, public holidays, and HR events</li>
+          <li>Cross-platform support — iOS (Swift) and Android (Flutter/Dart)</li>
+          <li>Secure REST API integration between mobile app and backend services</li>
+        </ul>
+      </div>
+
+      <div class="project-section">
+        <h2>My Contributions</h2>
+        <ul class="project-features">
+          <li>Developed the Flutter/Dart mobile application for Android deployment</li>
+          <li>Built iOS-specific modules using Swift on a Mac development environment</li>
+          <li>Implemented Clock In/Clock Out feature with real-time backend synchronization</li>
+          <li>Designed and built the interactive home dashboard with dynamic widgets</li>
+          <li>Developed the HR event calendar component with leave and holiday integration</li>
+          <li>Integrated .NET C# REST APIs for seamless data flow between app and backend</li>
+          <li>Configured Docker containerization for the backend services</li>
+          <li>Performed database operations and query handling using SSMS</li>
+        </ul>
+      </div>
+
+      <div class="project-section">
+        <h2>Tech Stack</h2>
+        <div class="project-techstack">
+          <div class="tech-item"><span>Flutter / Dart</span><p>Cross-platform mobile (Android)</p></div>
+          <div class="tech-item"><span>Swift</span><p>iOS native development</p></div>
+          <div class="tech-item"><span>.NET C#</span><p>Backend services and API</p></div>
+          <div class="tech-item"><span>ASP.NET Web API</span><p>RESTful API layer</p></div>
+          <div class="tech-item"><span>Microsoft SQL Server</span><p>Database management</p></div>
+          <div class="tech-item"><span>Docker</span><p>Container deployment</p></div>
+        </div>
+      </div>
+
+      <div class="project-section">
+        <h2>Screenshots</h2>
+        <div class="project-gallery project-gallery--mobile">
+          <div class="gallery-item">
+            <img src="assets/login-mobile.jpeg" alt="Login screen" />
+          </div>
+          <div class="gallery-item">
+            <img src="assets/dashboard mobile.jpeg" alt="Home dashboard" />
+          </div>
+          <div class="gallery-item">
+            <img src="assets/clockinout.jpeg" alt="Clock In/Out" />
+          </div>
+          <div class="gallery-item">
+            <img src="assets/calendar and leave calendar.jpeg" alt="Calendar view" />
+          </div>
+          <div class="gallery-item">
+            <img src="assets/payslip mobile .jpeg" alt="Payslip" />
+          </div>
+          <div class="gallery-item">
+            <img src="assets/payslip mobile 2.jpeg" alt="Payslip 2" />
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </main>
+
+  <!-- LIGHTBOX -->
+  <div class="lightbox" id="lightbox">
+    <button class="lightbox__close" id="lightboxClose">&times;</button>
+    <img class="lightbox__img" id="lightboxImg" src="" alt="" />
+  </div>
+
+  <footer class="footer">
+    <p>Designed &amp; Built by <strong>Muhammad Al Fath</strong></p>
+  </footer>
+
+  <script src="../js/main.js"></script>
+  <script>
+    const lightbox = document.getElementById('lightbox');
+    const lightboxImg = document.getElementById('lightboxImg');
+    const lightboxClose = document.getElementById('lightboxClose');
+
+    document.querySelectorAll('.gallery-item img').forEach(img => {
+      img.addEventListener('click', () => {
+        lightboxImg.src = img.src;
+        lightboxImg.alt = img.alt;
+        lightbox.classList.add('open');
+        document.body.style.overflow = 'hidden';
+      });
+    });
+
+    function closeLightbox() {
+      lightbox.classList.remove('open');
+      document.body.style.overflow = '';
+    }
+
+    lightboxClose.addEventListener('click', closeLightbox);
+    lightbox.addEventListener('click', e => { if (e.target === lightbox) closeLightbox(); });
+    document.addEventListener('keydown', e => { if (e.key === 'Escape') closeLightbox(); });
+  </script>
+</body>
+</html>

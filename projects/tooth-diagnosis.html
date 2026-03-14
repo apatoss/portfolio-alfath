@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tooth Pain Diagnosis System | Al Fath</title>
+  <link rel="stylesheet" href="../css/style.css" />
+  <link rel="stylesheet" href="../css/project.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+  <nav class="nav" id="nav">
+    <a href="../index.html" class="nav__logo">AF<span class="accent">.</span></a>
+    <a href="../index.html#projects" class="nav__back">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><polyline points="15 18 9 12 15 6"/></svg>
+      Back to Projects
+    </a>
+  </nav>
+
+  <main class="project-page">
+
+    <div class="project-hero">
+      <div class="container">
+        <span class="project-hero__badge">Personal Project &mdash; In Progress</span>
+        <h1 class="project-hero__title">Automated Tooth Pain Diagnosis and Dental Referral System</h1>
+        <p class="project-hero__subtitle">
+          An AI-powered web system that diagnoses tooth pain based on patient-reported symptoms and automatically refers them to the appropriate dental specialist — reducing unnecessary clinic visits and streamlining dental care.
+        </p>
+        <div class="project-hero__tags">
+          <span>TypeScript</span>
+          <span>React</span>
+          <span>.NET C#</span>
+          <span>ASP.NET Web API</span>
+          <span>SQL Server</span>
+          <span>REST API</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="container project-body">
+
+      <div class="project-section">
+        <h2>Overview</h2>
+        <p>
+          This system is designed to assist patients in identifying the likely cause of their tooth pain through a guided symptom-based questionnaire. Based on the collected inputs, the system uses a diagnosis engine to determine the probable dental condition and automatically refers the patient to the appropriate type of dental specialist.
+        </p>
+        <p>
+          The goal is to reduce the burden on general dental clinics by ensuring patients are directed to the right specialist from the start — saving time for both patients and practitioners.
+        </p>
+        <p class="project-note">
+          This project is currently in active development. Features and screenshots will be updated as progress continues.
+        </p>
+      </div>
+
+      <div class="project-section">
+        <h2>Planned Features</h2>
+        <ul class="project-features">
+          <li>Symptom-based questionnaire flow for tooth pain assessment</li>
+          <li>Automated diagnosis engine mapping symptoms to probable dental conditions</li>
+          <li>Intelligent referral system directing patients to the appropriate dental specialist</li>
+          <li>Patient record management and appointment tracking</li>
+          <li>Admin dashboard for dental clinic staff and specialists</li>
+          <li>Referral history and report generation for practitioners</li>
+        </ul>
+      </div>
+
+      <div class="project-section">
+        <h2>Tech Stack</h2>
+        <div class="project-techstack">
+          <div class="tech-item"><span>React</span><p>Frontend UI</p></div>
+          <div class="tech-item"><span>TypeScript</span><p>Frontend language</p></div>
+          <div class="tech-item"><span>.NET C# / ASP.NET</span><p>Backend services &amp; REST API</p></div>
+          <div class="tech-item"><span>Microsoft SQL Server</span><p>Database</p></div>
+          <div class="tech-item"><span>REST API</span><p>Frontend-backend integration</p></div>
+        </div>
+      </div>
+
+      <div class="project-section">
+        <h2>Screenshots</h2>
+        <p class="project-section__note">Screenshots will be added as the project progresses. Place image files in <code>projects/assets/</code>.</p>
+        <div class="project-gallery">
+          <div class="gallery-item gallery-item--desktop">
+            <img src="assets/tooth-1.png" alt="Diagnosis screen" />
+          </div>
+          <div class="gallery-item gallery-item--desktop">
+            <img src="assets/tooth-2.png" alt="Referral result" />
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </main>
+
+  <!-- LIGHTBOX -->
+  <div class="lightbox" id="lightbox">
+    <button class="lightbox__close" id="lightboxClose">&times;</button>
+    <img class="lightbox__img" id="lightboxImg" src="" alt="" />
+  </div>
+
+  <footer class="footer">
+    <p>Designed &amp; Built by <strong>Muhammad Al Fath</strong></p>
+  </footer>
+
+  <script src="../js/main.js"></script>
+  <script>
+    const lightbox = document.getElementById('lightbox');
+    const lightboxImg = document.getElementById('lightboxImg');
+    const lightboxClose = document.getElementById('lightboxClose');
+
+    document.querySelectorAll('.gallery-item img').forEach(img => {
+      img.addEventListener('click', () => {
+        lightboxImg.src = img.src;
+        lightboxImg.alt = img.alt;
+        lightbox.classList.add('open');
+        document.body.style.overflow = 'hidden';
+      });
+    });
+
+    function closeLightbox() {
+      lightbox.classList.remove('open');
+      document.body.style.overflow = '';
+    }
+
+    lightboxClose.addEventListener('click', closeLightbox);
+    lightbox.addEventListener('click', e => { if (e.target === lightbox) closeLightbox(); });
+    document.addEventListener('keydown', e => { if (e.key === 'Escape') closeLightbox(); });
+  </script>
+</body>
+</html>

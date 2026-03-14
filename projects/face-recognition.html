@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AI Face Recognition Attendance System | Al Fath</title>
+  <link rel="stylesheet" href="../css/style.css" />
+  <link rel="stylesheet" href="../css/project.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+  <nav class="nav" id="nav">
+    <a href="../index.html" class="nav__logo">AF<span class="accent">.</span></a>
+    <a href="../index.html#projects" class="nav__back">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><polyline points="15 18 9 12 15 6"/></svg>
+      Back to Projects
+    </a>
+  </nav>
+
+  <main class="project-page">
+
+    <div class="project-hero">
+      <div class="container">
+        <span class="project-hero__badge">Academic &mdash; Final Year Project (Degree)</span>
+        <h1 class="project-hero__title">AI Face Recognition Attendance System</h1>
+        <p class="project-hero__subtitle">
+          A real-time automated attendance system powered by face recognition, designed to replace manual attendance processes with a reliable, camera-based solution.
+        </p>
+        <div class="project-hero__tags">
+          <span>Python</span>
+          <span>OpenCV</span>
+          <span>MediaPipe</span>
+          <span>Flask</span>
+          <span>MySQL</span>
+          <span>Face Recognition</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="container project-body">
+
+      <div class="project-section">
+        <h2>Overview</h2>
+        <p>
+          This project was developed as my Bachelor's final year project at Management &amp; Science University (MSU). The goal was to automate the attendance recording process using real-time face recognition through a webcam, eliminating the need for manual sign-in sheets or card-based systems.
+        </p>
+        <p>
+          The system detects and recognizes registered faces in real time, automatically logs their attendance into a MySQL database, and provides an admin dashboard where HR personnel can view, manage, and export attendance records.
+        </p>
+      </div>
+
+      <div class="project-section">
+        <h2>Key Features</h2>
+        <ul class="project-features">
+          <li>Real-time face detection and recognition using webcam input</li>
+          <li>Automated attendance logging with timestamp into MySQL database</li>
+          <li>Admin dashboard to view attendance records by date and employee</li>
+          <li>Employee registration module with face encoding storage</li>
+          <li>CSV export for attendance report generation</li>
+          <li>Duplicate entry prevention — only logs once per session</li>
+        </ul>
+      </div>
+
+      <div class="project-section">
+        <h2>My Contributions</h2>
+        <ul class="project-features">
+          <li>Developed face detection and recognition module using OpenCV and MediaPipe</li>
+          <li>Integrated MySQL database for attendance and employee data storage</li>
+          <li>Built Flask web dashboard for admin/HR to monitor attendance</li>
+          <li>Implemented CSV export functionality for attendance reports</li>
+          <li>Designed the face encoding pipeline for new employee registration</li>
+        </ul>
+      </div>
+
+      <div class="project-section">
+        <h2>Tech Stack</h2>
+        <div class="project-techstack">
+          <div class="tech-item"><span>Python</span><p>Core application language</p></div>
+          <div class="tech-item"><span>OpenCV</span><p>Image processing and camera capture</p></div>
+          <div class="tech-item"><span>MediaPipe</span><p>Face detection and landmark extraction</p></div>
+          <div class="tech-item"><span>Face Recognition Library</span><p>Face encoding and matching</p></div>
+          <div class="tech-item"><span>Flask</span><p>Web dashboard backend</p></div>
+          <div class="tech-item"><span>MySQL</span><p>Attendance and employee data storage</p></div>
+        </div>
+      </div>
+
+      <div class="project-section">
+        <h2>Screenshots</h2>
+        <p class="project-section__note">Add screenshots of the system below. Place image files in the <code>projects/assets/</code> folder.</p>
+        <div class="project-gallery">
+          <!-- Replace each placeholder with: <img src="assets/face-rec-1.png" alt="Description" /> -->
+          <div class="gallery-placeholder">
+            <span>Screenshot 1</span>
+            <p>e.g. Main dashboard / attendance view</p>
+          </div>
+          <div class="gallery-placeholder">
+            <span>Screenshot 2</span>
+            <p>e.g. Real-time camera recognition</p>
+          </div>
+          <div class="gallery-placeholder">
+            <span>Screenshot 3</span>
+            <p>e.g. Admin panel / attendance report</p>
+          </div>
+          <div class="gallery-placeholder">
+            <span>Screenshot 4</span>
+            <p>e.g. Employee registration screen</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </main>
+
+  <footer class="footer">
+    <p>Designed &amp; Built by <strong>Muhammad Al Fath</strong></p>
+  </footer>
+
+  <script src="../js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Eco Smart Dustbin IoT | Al Fath</title>
+  <link rel="stylesheet" href="../css/style.css" />
+  <link rel="stylesheet" href="../css/project.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+  <nav class="nav" id="nav">
+    <a href="../index.html" class="nav__logo">AF<span class="accent">.</span></a>
+    <a href="../index.html#projects" class="nav__back">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><polyline points="15 18 9 12 15 6"/></svg>
+      Back to Projects
+    </a>
+  </nav>
+
+  <main class="project-page">
+
+    <div class="project-hero">
+      <div class="container">
+        <span class="project-hero__badge">Academic &mdash; Final Year Project (Diploma)</span>
+        <h1 class="project-hero__title">Eco Smart Dustbin IoT</h1>
+        <p class="project-hero__subtitle">
+          An IoT-powered smart dustbin that automatically opens its lid when an object is detected and monitors fill level, providing status output via an LCD display and Wi-Fi module.
+        </p>
+        <div class="project-hero__tags">
+          <span>Arduino</span>
+          <span>C++</span>
+          <span>Wemos D1 R1</span>
+          <span>Ultrasonic Sensor</span>
+          <span>IR Sensor</span>
+          <span>Servo Motor</span>
+          <span>IoT</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="container project-body">
+
+      <div class="project-section">
+        <h2>Overview</h2>
+        <p>
+          This project was developed as my Diploma final year project at Politeknik Sultan Mizan Zainal Abidin. The aim was to design and build an eco-friendly smart dustbin using IoT components that can detect the presence of a user, automatically open its lid, and report its fill level status.
+        </p>
+        <p>
+          The system reduces unnecessary physical contact with the bin (promoting hygiene), provides fill-level awareness to avoid overflow, and demonstrates practical embedded systems programming using Arduino and IoT communication.
+        </p>
+      </div>
+
+      <div class="project-section">
+        <h2>Key Features</h2>
+        <ul class="project-features">
+          <li>Automatic lid opening and closing via Servo Motor when an object is detected</li>
+          <li>Fill-level detection using Ultrasonic Sensor — alerts when bin is nearly full</li>
+          <li>IR Sensor for proximity-based lid trigger</li>
+          <li>LCD display showing current bin status and fill percentage</li>
+          <li>Wi-Fi connectivity via Wemos D1 R1 for remote status monitoring</li>
+        </ul>
+      </div>
+
+      <div class="project-section">
+        <h2>My Contributions</h2>
+        <ul class="project-features">
+          <li>Designed and assembled the full circuit with all electronic components</li>
+          <li>Programmed sensor logic and servo control using Arduino IDE (C++)</li>
+          <li>Implemented fill-level monitoring with threshold-based alerts on LCD</li>
+          <li>Configured Wemos D1 R1 for Wi-Fi communication and status reporting</li>
+          <li>Tested and calibrated sensor accuracy for reliable real-world performance</li>
+        </ul>
+      </div>
+
+      <div class="project-section">
+        <h2>Tech Stack &amp; Components</h2>
+        <div class="project-techstack">
+          <div class="tech-item"><span>Arduino IDE</span><p>Development environment</p></div>
+          <div class="tech-item"><span>C++</span><p>Embedded programming language</p></div>
+          <div class="tech-item"><span>Wemos D1 R1</span><p>Wi-Fi enabled microcontroller</p></div>
+          <div class="tech-item"><span>Ultrasonic Sensor</span><p>Fill-level detection</p></div>
+          <div class="tech-item"><span>IR Sensor</span><p>Proximity / object detection</p></div>
+          <div class="tech-item"><span>Servo Motor</span><p>Automatic lid mechanism</p></div>
+          <div class="tech-item"><span>LCD Display</span><p>Real-time status output</p></div>
+        </div>
+      </div>
+
+      <div class="project-section">
+        <h2>Screenshots &amp; Photos</h2>
+        <p class="project-section__note">Add photos of the physical prototype and circuit below. Place image files in the <code>projects/assets/</code> folder.</p>
+        <div class="project-gallery">
+          <div class="gallery-placeholder">
+            <span>Photo 1</span>
+            <p>e.g. Full dustbin prototype</p>
+          </div>
+          <div class="gallery-placeholder">
+            <span>Photo 2</span>
+            <p>e.g. Circuit board / wiring</p>
+          </div>
+          <div class="gallery-placeholder">
+            <span>Photo 3</span>
+            <p>e.g. LCD display output</p>
+          </div>
+          <div class="gallery-placeholder">
+            <span>Photo 4</span>
+            <p>e.g. Lid open demo</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </main>
+
+  <footer class="footer">
+    <p>Designed &amp; Built by <strong>Muhammad Al Fath</strong></p>
+  </footer>
+
+  <script src="../js/main.js"></script>
+</body>
+</html>
